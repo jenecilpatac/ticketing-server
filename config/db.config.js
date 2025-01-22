@@ -25,7 +25,7 @@ const sequelize = new Sequelize({
   database: 'ticketing_netsuite',
   username: 'root',
   password: 'D@pho04051983',
-  host: 'localhost',
+  host: '172.17.0.1',
   dialect: 'mysql', // Change this to the appropriate dialect
   dialectOptions: {
     connectTimeout: 60000 // Set the timeout to 60 seconds
