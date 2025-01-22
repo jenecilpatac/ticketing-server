@@ -3,11 +3,11 @@ FROM node:18
 
 # Set working directory
 WORKDIR /app
- 
 
-COPY package.json ./
+# Copy package.json and package-lock.json (if present) to leverage Docker cache
+COPY package.json package-lock.json ./
 
-# Install pnpm globally
+# Install dependencies using npm
 RUN npm install
 
 # Copy the entire app code
@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 7002
 
 # Start the application
-CMD ["npm", "run", "start:prod"]
+CMD ["npm", "run", "server"]
