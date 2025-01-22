@@ -23,8 +23,8 @@ const { Sequelize } = require('sequelize');
 // Create a new Sequelize instance
 const sequelize = new Sequelize({
   database: 'ticketing_netsuite',
-  username: 'root',
-  password: 'D@pho04051983',
+  username: 'smct',
+  password: 'smct',
   host: '172.17.0.1',
   dialect: 'mysql', // Change this to the appropriate dialect
   dialectOptions: {
