@@ -3,11 +3,12 @@ FROM node:18
 
 # Set working directory
 WORKDIR /app
-
-# Install pnpm globally
-RUN npm install 
+ 
 
 COPY package.json ./
+
+# Install pnpm globally
+RUN npm install
 
 # Copy the entire app code
 COPY . .
